@@ -1,0 +1,55 @@
+{
+  "name": "eslint-config-nova",
+  "version": "1.0.0",
+  "description": "Strict ESlint config for TypeScript and React projects using Prettier, JS modules and concerned about accessibility.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "eslint-find-deprecated-rules": "eslint-find-rules --deprecated",
+    "eslint-find-unused-rules": "eslint-find-rules --unused",
+    "lint": "eslint --ext .tsx --ext .ts --parser-options=tsconfigRootDir:./ --report-unused-disable-directives src/**",
+    "prepublish": "npm test && npm run build",
+    "test": "jest"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "typescript",
+    "react",
+    "prettier",
+    "import",
+    "a11y",
+    "react-hooks"
+  ],
+  "author": "Cédric Trigoso",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "24.0.12",
+    "@types/node": "12.0.0",
+    "@typescript-eslint/eslint-plugin": "1.7.0",
+    "@typescript-eslint/parser": "1.7.0",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "4.2.0",
+    "eslint-find-rules": "3.3.1",
+    "eslint-import-resolver-typescript": "1.1.1",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-jest": "22.5.1",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.13.0",
+    "eslint-plugin-react-hooks": "1.6.0",
+    "jest": "24.8.0",
+    "lerna": "^3.13.4",
+    "prettier": "1.17.0",
+    "react": "16.8.6",
+    "ts-jest": "24.0.2",
+    "typescript": "3.4.5"
+  },
+  "peerDependencies": {
+    "eslint-config-nova": ">= 1.0.0",
+    "eslint-plugin-jsx-a11y": ">= 6.2.1",
+    "eslint-plugin-react": ">= 7.13.0",
+    "eslint-plugin-react-hooks": ">= 1.6.0"
+  }
+}

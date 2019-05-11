@@ -1,0 +1,28 @@
+{
+  "name": "eslint-config-nova",
+  "version": "1.0.0",
+  "description": "Some utilities to help you through your projects.",
+  "scripts": {
+    "test:eslint-config-nova": "cd packages/eslint-config-nova; npm test",
+    "test:eslint-config-nova-react": "cd packages/eslint-config-nova-react; npm test",
+    "test": "npm run test:eslint-config-nova && npm run test:eslint-config-nova-react"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "typescript",
+    "react",
+    "prettier",
+    "import"
+  ],
+  "author": "Cédric Trigoso",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "24.0.12",
+    "@types/node": "12.0.0",
+    "eslint": "5.16.0",
+    "jest": "24.8.0",
+    "lerna": "^3.13.4",
+    "prettier": "1.17.0"
+  }
+}
