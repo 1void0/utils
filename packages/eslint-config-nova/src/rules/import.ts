@@ -14,11 +14,13 @@ module.exports = {
     // -- Static analysis:
 
     // Reports modules without any exports and individual exports not being statically imported or requireed from other modules in the same project
-
-    'import/no-unused-modules': [
-      'error',
-      { missingExports: true, unusedExports: true }
-    ],
+    'import/no-unused-modules': 'off',
+    /*
+     * 'import/no-unused-modules': [
+     *   'error',
+     *   { missingExports: true, unusedExports: true }
+     * ],
+     */
 
     // Ensure imports point to a file/module that can be resolved
     'import/no-unresolved': 'error',
