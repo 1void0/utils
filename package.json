@@ -1,7 +1,8 @@
 {
-  "name": "eslint-config-nova",
+  "name": "nova-utils",
   "version": "1.0.0",
   "description": "Some utilities to help you through your projects.",
+  "private": true,
   "scripts": {
     "test:eslint-config-nova": "cd packages/eslint-config-nova; npm test",
     "test:eslint-config-nova-react": "cd packages/eslint-config-nova-react; npm test",
@@ -24,9 +25,27 @@
   "devDependencies": {
     "@types/jest": "24.0.12",
     "@types/node": "12.0.0",
+    "@typescript-eslint/eslint-plugin": "1.7.0",
+    "@typescript-eslint/parser": "1.7.0",
     "eslint": "5.16.0",
+    "eslint-config-prettier": "4.2.0",
+    "eslint-find-rules": "3.3.1",
+    "eslint-import-resolver-typescript": "1.1.1",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-jest": "22.5.1",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.13.0",
+    "eslint-plugin-react-hooks": "1.6.0",
     "jest": "24.8.0",
     "lerna": "^3.13.4",
-    "prettier": "1.17.0"
+    "prettier": "1.17.0",
+    "react": "16.8.6",
+    "ts-jest": "24.0.2",
+    "typescript": "3.4.5"
+  },
+  "dependencies": {
+    "eslint-config-nova": "file:packages/eslint-config-nova",
+    "eslint-config-nova-react": "file:packages/eslint-config-nova-react"
   }
 }
