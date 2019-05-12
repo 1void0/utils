@@ -220,7 +220,7 @@ module.exports = {
     'react/jsx-no-undef': 'error',
 
     // Limit to one expression per line in JSX
-    'react/jsx-one-expression-per-line': 'error',
+    'react/jsx-one-expression-per-line': 'off',
 
     // Enforce curly braces or disallow unnecessary curly braces in JSX
     'react/jsx-curly-brace-presence': 'off',
