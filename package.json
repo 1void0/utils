@@ -4,6 +4,7 @@
   "description": "Some utilities to help you through your projects.",
   "private": true,
   "scripts": {
+    "release": "lerna publish from-git",
     "test:eslint-config-nova": "cd packages/eslint-config-nova; npm test",
     "test:eslint-config-nova-react": "cd packages/eslint-config-nova-react; npm test",
     "test": "npm run test:eslint-config-nova && npm run test:eslint-config-nova-react"
