@@ -23,6 +23,11 @@
     "react-hooks"
   ],
   "author": "Cédric Trigoso",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1void0/nova-utils.git",
+    "directory": "packages/eslint-config-nova-react"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "24.0.12",

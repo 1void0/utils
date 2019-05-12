@@ -16,6 +16,10 @@
     "import"
   ],
   "author": "Cédric Trigoso",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1void0/nova-utils.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "24.0.12",
