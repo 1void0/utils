@@ -23,6 +23,7 @@ jobs:
             - npm-cache-
 
       - run: npm run bootstrap
+      - run: npm run build
 
       - save_cache:
           key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
