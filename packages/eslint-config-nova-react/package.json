@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nova-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Strict ESlint config for TypeScript and React projects using Prettier, JS modules and concerned about accessibility.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
