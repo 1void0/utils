@@ -9,11 +9,6 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:dubnium-stretch
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
     working_directory: ~/tmp/circleci
 
     steps:
@@ -22,14 +17,14 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
         keys:
-          - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
-          - npm-cache-{{ .Branch }}
-          # fallback to using the latest cache if no exact match is found
-          - npm-cache-
+            - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
+            - npm-cache-{{ .Branch }}
+            # fallback to using the latest cache if no exact match is found
+            - npm-cache-
 
       # Set up NPM
       - run:
-        name: Setup npm
+        name: "set up NPM"
         command: |
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
 
