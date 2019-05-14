@@ -22,6 +22,14 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - npm-cache-
 
+      - run: npm install
+      - run: npm run bootstrap
+
+      - save_cache:
+          key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
       # Set up NPM
       - run:
           name: "set up NPM"
@@ -35,16 +43,8 @@ jobs:
             git config user.email "cedric@niriu.com"
             git config user.name "drixsonic"
 
-      - run: npm install
-      - run: npm run bootstrap
-
-      - save_cache:
-          key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
-          paths:
-            - node_modules
-
       # Run lint
-      - run: npm lint
+      - run: npm run lint
 
       # Run tests
       - run: npm test
