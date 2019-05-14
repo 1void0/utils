@@ -22,7 +22,6 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            keys:
             - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
             - npm-cache-{{ .Branch }}
             # fallback to using the latest cache if no exact match is found
