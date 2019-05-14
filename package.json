@@ -25,12 +25,12 @@
   "devDependencies": {
     "@commitlint/cli": "7.6.1",
     "@commitlint/config-lerna-scopes": "7.6.0",
-    "@commitlint/prompt": "7.6.1",
     "@types/jest": "24.0.12",
     "@types/node": "12.0.0",
     "@typescript-eslint/eslint-plugin": "1.7.0",
     "@typescript-eslint/parser": "1.7.0",
     "commitizen": "3.1.1",
+    "cz-conventional-changelog": "2.1.0",
     "eslint": "5.16.0",
     "eslint-config-prettier": "4.2.0",
     "eslint-find-rules": "3.3.1",
@@ -53,14 +53,14 @@
     "eslint-config-nova": "file:packages/eslint-config-nova",
     "eslint-config-nova-react": "file:packages/eslint-config-nova-react"
   },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/prompt"
-    }
-  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
