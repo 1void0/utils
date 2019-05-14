@@ -43,6 +43,9 @@ jobs:
           paths:
             - node_modules
 
+      # Run lint
+      - run: npm lint
+
       # Run tests
       - run: npm test
 
