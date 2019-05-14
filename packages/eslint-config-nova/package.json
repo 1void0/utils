@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nova",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Strict ESlint config for TypeScript projects using Prettier and JS modules.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
