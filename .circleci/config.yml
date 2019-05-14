@@ -21,22 +21,35 @@ jobs:
 
       # Download and cache dependencies
       - restore_cache:
-          keys:
-            - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
-            - npm-cache-{{ .Branch }}
-            # fallback to using the latest cache if no exact match is found
-            - npm-cache-
+        keys:
+          - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
+          - npm-cache-{{ .Branch }}
+          # fallback to using the latest cache if no exact match is found
+          - npm-cache-
+
+      # Set up NPM
+      - run:
+        name: Setup npm
+        command: |
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+
+      # Set up git
+      - run: 
+        name: "set up git"
+        command: |
+          git config user.email "cedric@niriu.com"
+          git config user.name "drixsonic"
 
       - run: npm install
       - run: npm run bootstrap
 
       - save_cache:
-          paths:
-            - node_modules
-          key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
+        paths:
+          - node_modules
+        key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
 
-      # run tests
+      # Run tests
       - run: npm test
 
-      # publish to npm
+      # Publish to npm
       - run: npm run release
