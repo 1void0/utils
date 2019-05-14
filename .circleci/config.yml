@@ -34,5 +34,8 @@ jobs:
             - node_modules
           key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
 
-      # run tests!
+      # run tests
       - run: npm test
+
+      # publish to npm
+      - run: npm run release
