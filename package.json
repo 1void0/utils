@@ -4,6 +4,7 @@
   "description": "Some utilities to help you through your projects.",
   "private": true,
   "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
     "commit": "git-cz",
     "release": "lerna publish",
     "test": "lerna run test"
