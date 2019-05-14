@@ -1,5 +1,7 @@
 /* eslint-env jest */
 
+/* eslint-disable import/unambiguous */
+
 /* eslint-disable-next-line import/no-commonjs, @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
 const config = require('../')
 
