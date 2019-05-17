@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/1void0/nova-utils/compare/eslint-config-nova-react@1.0.4...eslint-config-nova-react@1.0.5) (2019-05-14)
+
+
+### Bug Fixes
+
+* **eslint-config-nova-react:** fix lint ([8edf123](https://github.com/1void0/nova-utils/commit/8edf123))
+
+
+
+
+
 ## [1.0.4](https://github.com/1void0/nova-utils/compare/eslint-config-nova-react@1.0.3...eslint-config-nova-react@1.0.4) (2019-05-14)
 
 
