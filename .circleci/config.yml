@@ -22,8 +22,15 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - npm-cache-
 
-      - run: npm run bootstrap
-      - run: npm run build
+      - run:
+          name: "Install dependencies"
+          command: |
+            npm run bootstrap
+
+      - run:
+          name: "Build projects"
+          command: |
+            npm run build
 
       - save_cache:
           key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
@@ -38,7 +45,7 @@ jobs:
 
       # Set up git
       - run: 
-          name: "set up git"
+          name: "Set up Git"
           command: |
             git config user.email "cedric@niriu.com"
             git config user.name "drixsonic"
@@ -50,4 +57,9 @@ jobs:
       - run: npm test
 
       # Publish to npm
-      - run: npm run release
+      - run:
+          name: "Publish"
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              npm run release
+            fi
