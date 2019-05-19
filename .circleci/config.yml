@@ -3,6 +3,11 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+
 defaults: &defaults
   docker:
     # specify the version you desire here
@@ -27,6 +32,7 @@ jobs:
       - run:
           name: "Install dependencies"
           command: |
+            npm install
             npm run bootstrap
       - run:
           name: "Build projects"
