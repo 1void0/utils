@@ -17,7 +17,7 @@ defaults: &defaults
 
 version: 2
 jobs:
-  build:
+  checkout:
     <<: *defaults
     steps:
       - checkout
@@ -97,10 +97,10 @@ workflows:
   version: 2
   tests:
     jobs:
-      - build
+      - checkout
       - set-up:
           requires:
-            - build
+            - checkout
       - lint:
           requires:
             - checkout
