@@ -2,64 +2,113 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
+
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+
+defaults: &defaults
+  docker:
+    # specify the version you desire here
+    - image: circleci/node:dubnium-stretch
+
+  working_directory: ~/tmp/circlci-now
+
 version: 2
 jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:dubnium-stretch
-
-    working_directory: ~/tmp/circleci
-
+  checkout:
+    <<: *defaults
     steps:
       - checkout
-
-      # Download and cache dependencies
+      - attach_workspace:
+          at: ~/tmp/circlci-now
       - restore_cache:
           keys:
             - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
             - npm-cache-{{ .Branch }}
             # fallback to using the latest cache if no exact match is found
             - npm-cache-
-
       - run:
           name: "Install dependencies"
           command: |
+            npm install
             npm run bootstrap
-
       - run:
           name: "Build projects"
           command: |
             npm run build
-
       - save_cache:
           key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - node_modules
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
 
-      # Set up NPM
+  set-up:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/tmp/circlci-now
       - run:
           name: "set up NPM"
           command: |
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-
-      # Set up git
       - run: 
           name: "Set up Git"
           command: |
             git config user.email "cedric@niriu.com"
             git config user.name "drixsonic"
-
-      # Run lint
-      - run: npm run lint
-
-      # Run tests
-      - run: npm test
-
-      # Publish to npm
+      
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/tmp/circlci-now
       - run:
-          name: "Publish"
+          name: "Lint"
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            npm run lint
+
+  unit-tests:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/tmp/circlci-now
+      - run:
+          name: "Unit tests"
+          command: npm test
+
+  publish:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/tmp/circlci-now
+      - run:
+          name: "Publish to NPM"
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "release" ]; then
               npm run release
             fi
+
+workflows:
+  version: 2
+  tests:
+    jobs:
+      - checkout
+      - set-up:
+          requires:
+            - checkout
+      - lint:
+          requires:
+            - checkout
+      - unit-tests:
+          requires:
+            - checkout
+      - publish:
+          requires:
+            - set-up
+            - lint
+            - unit-tests
