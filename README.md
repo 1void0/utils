@@ -1,6 +1,7 @@
 # Nova utils
 
 [![CircleCI](https://circleci.com/gh/1void0/nova-utils.svg?style=shield)](https://circleci.com/gh/1void0/nova-utils)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
