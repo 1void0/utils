@@ -3,11 +3,6 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-
 defaults: &defaults
   environment:
       CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
@@ -64,12 +59,16 @@ jobs:
             git config user.email "cedric@niriu.com"
             git config user.name "drixsonic"
       - run:
-          name: Install Code Climate test-reporter
+          name:  Install Code Climate test-reporter
           command: |
-            # download test reporter as a static binary
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-      
+            mkdir -p tmp/
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
+            chmod +x ./tmp/cc-test-reporter
+      - persist_to_workspace:
+          root: tmp
+          paths:
+            - cc-test-reporter
+
   lint:
     <<: *defaults
     steps:
