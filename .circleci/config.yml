@@ -35,6 +35,11 @@ jobs:
           name: "Build projects"
           command: |
             npm run build
+      - run:
+          name:  Install Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
       - save_cache:
           key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
@@ -58,16 +63,6 @@ jobs:
           command: |
             git config user.email "cedric@niriu.com"
             git config user.name "drixsonic"
-      - run:
-          name:  Install Code Climate test-reporter
-          command: |
-            mkdir -p tmp/
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
-            chmod +x ./tmp/cc-test-reporter
-      - persist_to_workspace:
-          root: tmp
-          paths:
-            - cc-test-reporter
 
   lint:
     <<: *defaults
@@ -87,9 +82,9 @@ jobs:
       - run:
           name: "Unit tests"
           command: |
-            ./tmp/cc-test-reporter before-build
+            ./cc-test-reporter before-build
             npm test
-            ./tmp/cc-test-reporter after-build --exit-code $?
+            ./cc-test-reporter after-build --exit-code $?
 
   publish:
     <<: *defaults
@@ -117,7 +112,6 @@ workflows:
       - unit-tests:
           requires:
             - checkout
-            - set-up
       - publish:
           requires:
             - lint
