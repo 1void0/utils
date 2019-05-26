@@ -87,9 +87,9 @@ jobs:
       - run:
           name: "Unit tests"
           command: |
-            ./cc-test-reporter before-build
+            ./tmp/cc-test-reporter before-build
             npm test
-            ./cc-test-reporter after-build --exit-code $?
+            ./tmp/cc-test-reporter after-build --exit-code $?
 
   publish:
     <<: *defaults
