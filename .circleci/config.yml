@@ -9,6 +9,8 @@
 #
 
 defaults: &defaults
+  environment:
+      CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
   docker:
     # specify the version you desire here
     - image: circleci/node:dubnium-stretch
@@ -53,7 +55,7 @@ jobs:
       - attach_workspace:
           at: ~/tmp/circlci-now
       - run:
-          name: "set up NPM"
+          name: "Set up NPM"
           command: |
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run: 
@@ -61,6 +63,12 @@ jobs:
           command: |
             git config user.email "cedric@niriu.com"
             git config user.name "drixsonic"
+      - run:
+          name: Install Code Climate test-reporter
+          command: |
+            # download test reporter as a static binary
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
       
   lint:
     <<: *defaults
@@ -79,7 +87,10 @@ jobs:
           at: ~/tmp/circlci-now
       - run:
           name: "Unit tests"
-          command: npm test
+          command: |
+            ./cc-test-reporter before-build
+            npm test
+            ./cc-test-reporter after-build --exit-code $?
 
   publish:
     <<: *defaults

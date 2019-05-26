@@ -9,7 +9,8 @@
     "eslint-find-deprecated-rules": "eslint-find-rules --deprecated",
     "eslint-find-unused-rules": "eslint-find-rules --unused",
     "lint": "eslint --ext .tsx --ext .ts --parser-options=tsconfigRootDir:./ --report-unused-disable-directives src/**",
-    "test": "jest"
+    "test": "jest",
+    "test-with-coverage": "jest --coverage"
   },
   "keywords": [
     "eslint",
