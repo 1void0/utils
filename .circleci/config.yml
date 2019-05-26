@@ -117,8 +117,8 @@ workflows:
       - unit-tests:
           requires:
             - checkout
+            - set-up
       - publish:
           requires:
-            - set-up
             - lint
             - unit-tests
