@@ -3,11 +3,6 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-
 defaults: &defaults
   docker:
     # specify the version you desire here
@@ -38,6 +33,12 @@ jobs:
           name: "Build projects"
           command: |
             npm run build
+      - run:
+          name:  Install Code Climate test-reporter
+          command: |
+            mkdir -p tmp/
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
+            chmod +x ./tmp/cc-test-reporter
       - save_cache:
           key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
@@ -53,7 +54,7 @@ jobs:
       - attach_workspace:
           at: ~/tmp/circlci-now
       - run:
-          name: "set up NPM"
+          name: "Set up NPM"
           command: |
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run: 
@@ -61,7 +62,7 @@ jobs:
           command: |
             git config user.email "cedric@niriu.com"
             git config user.name "drixsonic"
-      
+
   lint:
     <<: *defaults
     steps:
@@ -79,7 +80,19 @@ jobs:
           at: ~/tmp/circlci-now
       - run:
           name: "Unit tests"
-          command: npm test
+          command: |
+            ./tmp/cc-test-reporter before-build
+            npm test
+            for f in packages/*; do
+              if [ -d "$f" ]; then
+                echo $f
+                if [ -d "$f/coverage" ]; then
+                  ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/coverage.${f//\//-}.json $f/coverage/lcov.info
+                fi
+              fi
+            done;
+            ./tmp/cc-test-reporter sum-coverage -o tmp/coverage.total.json tmp/coverage.*.json
+            ./tmp/cc-test-reporter upload-coverage -i tmp/coverage.total.json -r $CC_TEST_REPORTER_ID
 
   publish:
     <<: *defaults
@@ -109,6 +122,5 @@ workflows:
             - checkout
       - publish:
           requires:
-            - set-up
             - lint
             - unit-tests
