@@ -4,8 +4,6 @@
 #
 
 defaults: &defaults
-  environment:
-      CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
   docker:
     # specify the version you desire here
     - image: circleci/node:dubnium-stretch
@@ -94,7 +92,7 @@ jobs:
               fi
             done;
             ./tmp/cc-test-reporter sum-coverage -o tmp/coverage.total.json tmp/coverage.*.json
-            ./tmp/cc-test-reporter upload-coverage -i tmp/coverage.total.json
+            ./tmp/cc-test-reporter upload-coverage -i tmp/coverage.total.json -r $CC_TEST_REPORTER_ID
 
   publish:
     <<: *defaults
