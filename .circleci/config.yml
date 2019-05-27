@@ -89,13 +89,12 @@ jobs:
               if [ -d "$f" ]; then
                 echo $f
                 if [ -d "$f/coverage" ]; then
-                  ./coverage/cc-test-reporter format-coverage -t lcov -o coverage/coverage.${f//\//-}.json $f/coverage/lcov.info
+                  ./tmp/cc-test-reporter format-coverage -t lcov -o coverage/coverage.${f//\//-}.json $f/coverage/lcov.info
                 fi
               fi
             done;
             ./tmp/cc-test-reporter sum-coverage -o tmp/coverage.total.json tmp/coverage.*.json
             ./tmp/cc-test-reporter upload-coverage -i tmp/coverage.total.json
-            #./tmp/cc-test-reporter after-build --coverage-input-type lcov --exit-code $?
 
   publish:
     <<: *defaults
