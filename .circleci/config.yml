@@ -38,8 +38,9 @@ jobs:
       - run:
           name:  Install Code Climate test-reporter
           command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
+            mkdir -p tmp/
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
+            chmod +x ./tmp/cc-test-reporter
       - save_cache:
           key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
@@ -82,9 +83,18 @@ jobs:
       - run:
           name: "Unit tests"
           command: |
-            ./cc-test-reporter before-build
-            npm test
-            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
+            ./tmp/cc-test-reporter before-build
+            for f in packages/*; do
+              if [ -d "$f" ]; then
+                echo $f
+                if [ -d "$f/coverage" ]; then
+                  ./coverage/cc-test-reporter format-coverage -t lcov -o coverage/coverage.${f//\//-}.json $f/coverage/lcov.info
+                fi
+              fi
+            done;
+            ./tmp/cc-test-reporter sum-coverage -o tmp/coverage.total.json tmp/coverage.*.json
+            ./tmp/cc-test-reporter upload-coverage -i tmp/coverage.total.json
+            #./tmp/cc-test-reporter after-build --coverage-input-type lcov --exit-code $?
 
   publish:
     <<: *defaults
