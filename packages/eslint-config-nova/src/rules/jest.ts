@@ -22,6 +22,9 @@ module.exports = {
     // Disallow disabled tests
     'jest/no-disabled-tests': 'error',
 
+    // Disallow commented out tests
+    'jest/no-commented-out-tests': 'error',
+
     // Disallow empty titles
     'jest/no-empty-title': 'error',
 

@@ -25,16 +25,16 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - npm-cache-
       - run:
-          name: "Install dependencies"
+          name: 'Install dependencies'
           command: |
             npm install
             npm run bootstrap
       - run:
-          name: "Build projects"
+          name: 'Build projects'
           command: |
             npm run build
       - run:
-          name:  Install Code Climate test-reporter
+          name: Install Code Climate test-reporter
           command: |
             mkdir -p tmp/
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
@@ -54,11 +54,11 @@ jobs:
       - attach_workspace:
           at: ~/tmp/circlci-now
       - run:
-          name: "Set up NPM"
+          name: 'Set up NPM'
           command: |
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-      - run: 
-          name: "Set up Git"
+      - run:
+          name: 'Set up Git'
           command: |
             git config user.email "cedric@niriu.com"
             git config user.name "drixsonic"
@@ -69,7 +69,7 @@ jobs:
       - attach_workspace:
           at: ~/tmp/circlci-now
       - run:
-          name: "Lint"
+          name: 'Lint'
           command: |
             npm run lint
 
@@ -79,7 +79,7 @@ jobs:
       - attach_workspace:
           at: ~/tmp/circlci-now
       - run:
-          name: "Unit tests"
+          name: 'Unit tests'
           command: |
             ./tmp/cc-test-reporter before-build
             npm test
@@ -100,7 +100,7 @@ jobs:
       - attach_workspace:
           at: ~/tmp/circlci-now
       - run:
-          name: "Publish to NPM"
+          name: 'Publish to NPM'
           command: |
             if [ "${CIRCLE_BRANCH}" == "release" ]; then
               npm run release
@@ -122,5 +122,6 @@ workflows:
             - checkout
       - publish:
           requires:
+            - set-up
             - lint
             - unit-tests
