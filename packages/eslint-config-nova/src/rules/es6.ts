@@ -33,7 +33,7 @@ module.exports = {
     'no-dupe-class-members': 'error',
 
     // Disallow duplicate module imports
-    'no-duplicate-imports': 'off',
+    'no-duplicate-imports': 'error',
 
     // Disallow new operators with the Symbol object
     'no-new-symbol': 'error',
