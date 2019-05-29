@@ -18,9 +18,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/tmp/circlci-now
-      - restore_cache:
-          keys:
-            - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
+      # - restore_cache:
+      #     keys:
+      #       - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
       - run:
           name: 'Install dependencies'
           command: |
@@ -36,10 +36,10 @@ jobs:
             mkdir -p tmp/
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
             chmod +x ./tmp/cc-test-reporter
-      - save_cache:
-          key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
-          paths:
-            - node_modules
+      # - save_cache:
+      #     key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
+      #     paths:
+      #       - node_modules
       - persist_to_workspace:
           root: .
           paths:
