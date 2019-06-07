@@ -1,0 +1,30 @@
+{
+  "name": "commitlint-config-nova",
+  "version": "1.0.0",
+  "description": "Shareable commitlint config adding content and design to conventional commits",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint --ext .js --report-unused-disable-directives /**",
+    "test": "jest",
+    "test-with-coverage": "jest --coverage"
+  },
+  "keywords": [
+    "conventional-changelog",
+    "commitlint",
+    "commitlint-config",
+    "conventions",
+    "lint",
+    "github",
+    "labels"
+  ],
+  "author": "Cédric Trigoso",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1void0/nova-utils.git",
+    "directory": "packages/commitlint-config-nova"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@commitlint/config-conventional": "7.6.0"
+  }
+}

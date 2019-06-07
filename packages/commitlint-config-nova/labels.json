@@ -1,0 +1,117 @@
+[
+  {
+    "name": "bug 👾",
+    "color": "cd2f40",
+    "description": "Something isn't working"
+  },
+  {
+    "name": "build 🚧",
+    "color": "006cbe",
+    "description": "Changes that affect the build system or external dependencies"
+  },
+  {
+    "name": "chore 🧹",
+    "color": "ffffbb",
+    "description": "A change that doesn't fit in any other category (e.g. publish package, update .gitignore, etc.)"
+  },
+  {
+    "name": "ci 🤖",
+    "color": "046D8B",
+    "description": "Changes to our CI configuration files and scripts"
+  },
+  {
+    "name": "code style 💅🏼",
+    "color": "f9d820",
+    "description": "Changes that do not affect the meaning of the code (white-space, formatting, etc.)"
+  },
+  {
+    "name": "content 🦁",
+    "color": "602385",
+    "description": "Content related changes (e.g. copy, images, videos, etc.)"
+  },
+  {
+    "name": "dependencies 📦",
+    "color": "006cbe",
+    "description": "Updates a dependency"
+  },
+  {
+    "name": "design 🎨",
+    "color": "b6328d",
+    "description": "Changes to the user experience or user interface (UX/UI)"
+  },
+  {
+    "name": "discussion 🗣",
+    "color": "bfdadc",
+    "description": "A discussion that it not necessarily related to a concrete bug or feature"
+  },
+  {
+    "name": "documentation 📑",
+    "color": "10339a",
+    "description": "Documentation only changes"
+  },
+  {
+    "name": "duplicate 👻",
+    "color": "ececec",
+    "description": "This issue or pull request already exists"
+  },
+  {
+    "name": "feature ✨",
+    "color": "1cce99",
+    "description": "Adds, modifies or removes a feature"
+  },
+  {
+    "name": "good first issue 👋🏼",
+    "color": "a2eeef",
+    "description": "Good for newcomers"
+  },
+  {
+    "name": "help wanted 🙏🏼",
+    "color": "a2eeef",
+    "description": "Extra attention is needed"
+  },
+  {
+    "name": "invalid ⛔️",
+    "color": "ececec",
+    "description": "This doesn't seem right"
+  },
+  {
+    "name": "on hold 🛑",
+    "color": "555555",
+    "description": "This issue or pull request is currently blocked by something"
+  },
+  {
+    "name": "performance 🚀",
+    "color": "d7ffc1",
+    "description": "A code change that improves performance"
+  },
+  {
+    "name": "question ⁉️",
+    "color": "bfdadc",
+    "description": "Further information is requested"
+  },
+  {
+    "name": "SCOPE_PLACEHOLDER",
+    "color": "fae6ce",
+    "description": "Use this color for creating your scope labels"
+  },
+  {
+    "name": "technical debt 🛠",
+    "color": "fca042",
+    "description": "A technical improvement or refactoring which doesn't add any new feature or change existing features"
+  },
+  {
+    "name": "revert 🔙",
+    "color": "f70eeb",
+    "description": "Reverts a previous commit"
+  },
+  {
+    "name": "test 🛡",
+    "color": "f95411",
+    "description": "Adding missing tests or correcting existing tests"
+  },
+  {
+    "name": "wontfix 🙅‍♀️ ",
+    "color": "ececec",
+    "description": "This will not be worked on"
+  }
+]
