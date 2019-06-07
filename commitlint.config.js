@@ -4,5 +4,5 @@
 /* eslint-disable import/no-commonjs */
 
 module.exports = {
-  extends: ['commitlint-config-nova', '@commitlint/config-lerna-scopes']
+  extends: ['nova', '@commitlint/config-lerna-scopes']
 }
