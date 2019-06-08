@@ -1,0 +1,6 @@
+{
+  "extends": ["@void0/eslint-config"],
+  "parserOptions": {
+    "tsconfigRootDir": "./packages/eslint-config-react/"
+  }
+}

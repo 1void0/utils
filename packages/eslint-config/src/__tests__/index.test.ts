@@ -32,7 +32,7 @@ const getFiles = async (): Promise<object> =>
     }
   )
 
-describe('eslint-config-nova', (): void => {
+describe('@void0/eslint-config', (): void => {
   test('extends all files', async (): Promise<void> => {
     expect.assertions(1)
     const files = await getFiles()

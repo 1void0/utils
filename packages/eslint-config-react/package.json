@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-nova",
-  "version": "1.0.5",
-  "description": "Strict ESlint config for TypeScript projects using Prettier and JS modules.",
+  "name": "@void0/eslint-config-react",
+  "version": "1.0.6",
+  "description": "Strict ESlint config for TypeScript and React projects using Prettier, JS modules and concerned about accessibility.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -16,25 +16,36 @@
     "eslint",
     "eslintconfig",
     "typescript",
+    "react",
     "prettier",
-    "import"
+    "import",
+    "a11y",
+    "react-hooks"
   ],
   "author": "Cédric Trigoso",
   "repository": {
     "type": "git",
-    "url": "https://github.com/1void0/nova-utils.git",
-    "directory": "packages/eslint-config-nova"
+    "url": "git+https://github.com/1void0/nova-utils.git",
+    "directory": "packages/eslint-config-react"
   },
   "license": "ISC",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">= 1.9.0",
     "@typescript-eslint/parser": ">= 1.9.0",
+    "@void0/eslint-config": ">= 1.0.5",
     "eslint": ">= 5.16.0",
     "eslint-config-prettier": ">= 4.3.x",
     "eslint-import-resolver-typescript": ">= 1.1.1",
     "eslint-plugin-import": ">= 2.17.3",
     "eslint-plugin-jest": ">= 22.6.4",
+    "eslint-plugin-jsx-a11y": ">= 6.2.1",
     "eslint-plugin-prettier": ">= 3.1.0",
+    "eslint-plugin-react": ">= 7.13.0",
+    "eslint-plugin-react-hooks": ">= 1.6.0",
     "typescript": ">= 3.x"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/1void0/nova-utils/issues"
+  },
+  "homepage": "https://github.com/1void0/nova-utils#readme"
 }

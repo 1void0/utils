@@ -4,7 +4,7 @@ If your project uses Github issues, you might want to add labels corresponding t
 
 We associated a color to each type, so we can group several Github labels per type.
 
-Here is a list of all the types allowed in `commitlint-config-nova`:
+Here is a list of all the types allowed in `@void0/commitlint-config`:
 
 ![#006cbe](https://placehold.it/15/006cbe/000000?text=+) `build [#006cbe]`: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
 

@@ -10,7 +10,7 @@ module.exports = {
     node: true
   },
   extends: [
-    'eslint-config-nova',
+    '@void0/eslint-config',
     require.resolve('./rules/react'),
     require.resolve('./rules/react-hooks'),
     require.resolve('./rules/a11y')

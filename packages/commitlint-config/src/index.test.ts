@@ -6,7 +6,7 @@
 /* eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
 const config = require('./')
 
-describe('commitlint-config-nova', (): void => {
+describe('@void0/commitlint-config', (): void => {
   test('extends @commitlint/config-conventional', (): void => {
     expect.assertions(1)
     expect(config.extends).toContain('@commitlint/config-conventional')
