@@ -4,7 +4,7 @@ import fs from 'fs'
 import path from 'path'
 
 /* eslint-disable-next-line import/no-commonjs, @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
-const config = require('../')
+const eslintConfig = require('../')
 
 const getFiles = async (): Promise<object> =>
   new Promise(
@@ -36,12 +36,12 @@ describe('@void0/eslint-config', (): void => {
   test('extends all files', async (): Promise<void> => {
     expect.assertions(1)
     const files = await getFiles()
-    expect(config.extends).toHaveLength(Object.keys(files).length)
+    expect(eslintConfig.extends).toHaveLength(Object.keys(files).length)
   })
 
   test('has the correct environment', (): void => {
     expect.assertions(1)
-    expect(config.env).toStrictEqual({
+    expect(eslintConfig.env).toStrictEqual({
       es6: true,
       node: true
     })

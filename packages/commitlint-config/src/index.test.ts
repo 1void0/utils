@@ -4,17 +4,19 @@
 /* eslint-disable import/no-commonjs */
 
 /* eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
-const config = require('./')
+const commitlintConfig = require('./')
 
 describe('@void0/commitlint-config', (): void => {
   test('extends @commitlint/config-conventional', (): void => {
     expect.assertions(1)
-    expect(config.extends).toContain('@commitlint/config-conventional')
+    expect(commitlintConfig.extends).toContain(
+      '@commitlint/config-conventional'
+    )
   })
 
   test('rules', (): void => {
     expect.assertions(1)
-    expect(config.rules['type-enum'][2]).toStrictEqual([
+    expect(commitlintConfig.rules['type-enum'][2]).toStrictEqual([
       'build',
       'chore',
       'ci',
