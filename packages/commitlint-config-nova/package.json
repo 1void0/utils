@@ -4,7 +4,8 @@
   "description": "Shareable commitlint config adding content and design to conventional commits",
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint --ext .js --report-unused-disable-directives /**",
+    "build": "tsc",
+    "lint": "eslint --ext .tsx --ext .ts --parser-options=tsconfigRootDir:./ --report-unused-disable-directives src/**",
     "test": "jest",
     "test-with-coverage": "jest --coverage"
   },
@@ -26,5 +27,9 @@
   "license": "ISC",
   "dependencies": {
     "@commitlint/config-conventional": "7.6.0"
+  },
+  "devDependencies": {
+    "eslint": ">= 5.16.0",
+    "eslint-config-nova": ">= 1.0.3"
   }
 }

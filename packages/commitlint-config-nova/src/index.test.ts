@@ -6,13 +6,13 @@
 /* eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
 const config = require('./')
 
-describe('commitlint-config-nova', () => {
-  test('extends @commitlint/config-conventional', () => {
+describe('commitlint-config-nova', (): void => {
+  test('extends @commitlint/config-conventional', (): void => {
     expect.assertions(1)
     expect(config.extends).toContain('@commitlint/config-conventional')
   })
 
-  test('rules', () => {
+  test('rules', (): void => {
     expect.assertions(1)
     expect(config.rules['type-enum'][2]).toStrictEqual([
       'build',
