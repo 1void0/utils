@@ -25,19 +25,18 @@
     "url": "git+https://github.com/1void0/nova-utils.git",
     "directory": "packages/commitlint-config"
   },
-  "license": "ISC",
-  "dependencies": {
-    "@commitlint/config-conventional": "7.6.0"
-  },
-  "devDependencies": {
-    "eslint": ">= 5.16.0",
-    "@void0/eslint-config": ">= 1.0.5"
-  },
   "bugs": {
     "url": "https://github.com/1void0/nova-utils/issues"
   },
   "homepage": "https://github.com/1void0/nova-utils#readme",
   "directories": {
     "doc": "docs"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@commitlint/config-conventional": "7.6.0"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": "8.0.0"
   }
 }
