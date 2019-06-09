@@ -48,21 +48,6 @@ jobs:
           paths:
             - .
 
-  set-up:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/tmp/circlci-now
-      - run:
-          name: 'Set up NPM'
-          command: |
-            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-      - run:
-          name: 'Set up Git'
-          command: |
-            git config user.email "cedric@niriu.com"
-            git config user.name "drixsonic"
-
   lint:
     <<: *defaults
     steps:
@@ -97,9 +82,18 @@ jobs:
   publish:
     <<: *defaults
     steps:
-      - checkout
+      - checkout # Apparently needed to avoid getting "The authenticity of host 'github.com (192.30.253.113)' can't be established."
       - attach_workspace:
           at: ~/tmp/circlci-now
+      - run:
+          name: 'Set up NPM'
+          command: |
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - run:
+          name: 'Set up Git'
+          command: |
+            git config user.email "cedric@niriu.com"
+            git config user.name "drixsonic"
       - run:
           name: 'Publish to NPM'
           command: |
@@ -112,9 +106,6 @@ workflows:
   tests:
     jobs:
       - checkout
-      - set-up:
-          requires:
-            - checkout
       - lint:
           requires:
             - checkout
@@ -123,6 +114,6 @@ workflows:
             - checkout
       - publish:
           requires:
-            - set-up
+            - checkout
             - lint
             - unit-tests
