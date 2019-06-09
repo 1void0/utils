@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/1void0/nova-utils/compare/@void0/eslint-config@1.0.6...@void0/eslint-config@1.0.9) (2019-06-09)
+
+
+### Bug Fixes
+
+* release to NPM ([69fba3b](https://github.com/1void0/nova-utils/commit/69fba3b))
+
+
+
+
+
 ## [1.0.7](https://github.com/1void0/nova-utils/compare/@void0/eslint-config@1.0.6...@void0/eslint-config@1.0.7) (2019-06-09)
 
 
