@@ -22,13 +22,13 @@
   "author": "Cédric Trigoso",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1void0/nova-utils.git",
+    "url": "git+https://github.com/1void0/utilities.git",
     "directory": "packages/eslint-config"
   },
   "bugs": {
-    "url": "https://github.com/1void0/nova-utils/issues"
+    "url": "https://github.com/1void0/utilities/issues"
   },
-  "homepage": "https://github.com/1void0/nova-utils#readme",
+  "homepage": "https://github.com/1void0/utilities#readme",
   "license": "ISC",
   "publishConfig": {
     "access": "public"

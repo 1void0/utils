@@ -1,5 +1,5 @@
 {
-  "name": "nova-utils",
+  "name": "void0-utilities",
   "version": "1.0.0",
   "description": "Some utilities to help you through your projects.",
   "private": true,
@@ -22,7 +22,7 @@
   "author": "Cédric Trigoso",
   "repository": {
     "type": "git",
-    "url": "https://github.com/1void0/nova-utils.git"
+    "url": "https://github.com/1void0/utilities.git"
   },
   "license": "ISC",
   "devDependencies": {
