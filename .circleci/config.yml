@@ -79,28 +79,6 @@ jobs:
             ./tmp/cc-test-reporter sum-coverage -o tmp/coverage.total.json tmp/coverage.*.json
             ./tmp/cc-test-reporter upload-coverage -i tmp/coverage.total.json -r $CC_TEST_REPORTER_ID
 
-  publish:
-    <<: *defaults
-    steps:
-      - checkout # Apparently needed to avoid getting "The authenticity of host 'github.com (192.30.253.113)' can't be established."
-      - attach_workspace:
-          at: ~/tmp/circlci-now
-      - run:
-          name: 'Set up NPM'
-          command: |
-            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/tmp/.npmrc
-      - run:
-          name: 'Set up Git'
-          command: |
-            git config user.email "cedric@niriu.com"
-            git config user.name "drixsonic"
-      - run:
-          name: 'Publish to NPM'
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "release" ]; then
-              npm run release
-            fi
-
 workflows:
   version: 2
   tests:
@@ -112,8 +90,3 @@ workflows:
       - unit-tests:
           requires:
             - checkout
-      - publish:
-          requires:
-            - checkout
-            - lint
-            - unit-tests
