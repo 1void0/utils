@@ -1,4 +1,4 @@
-# Nova utils
+# Void0 utilities
 
 [![CircleCI](https://circleci.com/gh/1void0/nova-utils.svg?style=shield)](https://circleci.com/gh/1void0/nova-utils)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
