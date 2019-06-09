@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'nova',
+  extends: '@void0/eslint-config',
   parserOptions: {
     project: null
   },

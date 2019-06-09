@@ -1,6 +1,6 @@
 {
   "extends": ["./dist/index.js"],
   "parserOptions": {
-    "tsconfigRootDir": "./packages/eslint-config-nova/"
+    "tsconfigRootDir": "./packages/eslint-config/"
   }
 }

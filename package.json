@@ -54,9 +54,9 @@
     "typescript": "3.5.1"
   },
   "dependencies": {
-    "commitlint-config-nova": "file:packages/commitlint-config-nova",
-    "eslint-config-nova": "file:packages/eslint-config-nova",
-    "eslint-config-nova-react": "file:packages/eslint-config-nova-react"
+    "@void0/commitlint-config": "file:packages/commitlint-config",
+    "@void0/eslint-config": "file:packages/eslint-config",
+    "@void0/eslint-config-react": "file:packages/eslint-config-react"
   },
   "husky": {
     "hooks": {

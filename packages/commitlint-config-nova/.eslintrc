@@ -1,6 +1,0 @@
-{
-  "extends": ["nova"],
-  "parserOptions": {
-    "tsconfigRootDir": "./packages/commitlint-config-nova/"
-  }
-}

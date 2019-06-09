@@ -3,12 +3,12 @@
 /* eslint-disable import/unambiguous */
 
 /* eslint-disable-next-line import/no-commonjs, @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
-const config = require('../')
+const eslintReactConfig = require('../')
 
-describe('eslint-config-nova-react', (): void => {
+describe('@void0/eslint-config-react', (): void => {
   test('has the correct environment', (): void => {
     expect.assertions(1)
-    expect(config.env).toStrictEqual({
+    expect(eslintReactConfig.env).toStrictEqual({
       browser: true,
       es6: true,
       node: true
@@ -18,10 +18,10 @@ describe('eslint-config-nova-react', (): void => {
   test('extends expected rules', async (): Promise<void> => {
     expect.hasAssertions()
 
-    config.extends.forEach(
+    eslintReactConfig.extends.forEach(
       (name: string): void => {
         expect(
-          name === 'eslint-config-nova' ||
+          name === '@void0/eslint-config' ||
             name.includes('a11y') ||
             name.includes('react') ||
             name.includes('react-hooks')

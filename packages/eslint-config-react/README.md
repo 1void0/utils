@@ -1,4 +1,4 @@
-# eslint-config-nova-react
+# @void0/eslint-config-react
 
 This package provides a strict ESlint config TypeScript and React projects using Prettier, JS modules and concerned about accessibility.
 
@@ -22,19 +22,19 @@ It has several peer dependencies needed for each kind of rules it contains:
 1. Install the correct versions of each package, which are listed by the command:
 
 ```sh
-npm info "eslint-config-nova-react@latest" peerDependencies
+npm info "@void0/eslint-config-react@latest" peerDependencies
 ```
 
 If using **npm 5+**, use this shortcut
 
 ```sh
-npx install-peerdeps --dev eslint-config-nova-react
+npx install-peerdeps --dev @void0/eslint-config-react
 ```
 
 If using **yarn**, you can also use the shortcut described above if you have npm 5+ installed on your machine, as the command will detect that you are using yarn and will act accordingly.
 Otherwise, run `npm info "eslint-config-airbnb-base@latest" peerDependencies` to list the peer dependencies and versions, then run `yarn add --dev <dependency>@<version>` for each listed peer dependency.
 
-2. Add `"extends": "nova-react"` to your .eslintrc.
+2. Add `"extends": "@void0/eslint-config-react"` to your .eslintrc.
 
 ## Ignored Rules
 

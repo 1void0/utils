@@ -1,8 +1,9 @@
 {
-  "name": "commitlint-config-nova",
+  "name": "@void0/commitlint-config",
   "version": "1.0.0",
   "description": "Shareable commitlint config adding content and design to conventional commits",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ext .tsx --ext .ts --parser-options=tsconfigRootDir:./ --report-unused-disable-directives src/**",
@@ -21,15 +22,21 @@
   "author": "Cédric Trigoso",
   "repository": {
     "type": "git",
-    "url": "https://github.com/1void0/nova-utils.git",
-    "directory": "packages/commitlint-config-nova"
+    "url": "git+https://github.com/1void0/nova-utils.git",
+    "directory": "packages/commitlint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/1void0/nova-utils/issues"
+  },
+  "homepage": "https://github.com/1void0/nova-utils#readme",
+  "directories": {
+    "doc": "docs"
   },
   "license": "ISC",
   "dependencies": {
     "@commitlint/config-conventional": "7.6.0"
   },
-  "devDependencies": {
-    "eslint": ">= 5.16.0",
-    "eslint-config-nova": ">= 1.0.3"
+  "peerDependencies": {
+    "@commitlint/cli": "8.0.0"
   }
 }

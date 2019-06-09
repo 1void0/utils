@@ -1,0 +1,46 @@
+{
+  "name": "@void0/eslint-config",
+  "version": "1.0.5",
+  "description": "Strict ESlint config for TypeScript projects using Prettier and JS modules.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "eslint-find-deprecated-rules": "eslint-find-rules --deprecated",
+    "eslint-find-unused-rules": "eslint-find-rules --unused",
+    "lint": "eslint --ext .tsx --ext .ts --parser-options=tsconfigRootDir:./ --report-unused-disable-directives src/**",
+    "test": "jest",
+    "test-with-coverage": "jest --coverage"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "typescript",
+    "prettier",
+    "import"
+  ],
+  "author": "Cédric Trigoso",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1void0/nova-utils.git",
+    "directory": "packages/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/1void0/nova-utils/issues"
+  },
+  "homepage": "https://github.com/1void0/nova-utils#readme",
+  "license": "ISC",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "1.9.0",
+    "@typescript-eslint/parser": "1.9.0",
+    "eslint-config-prettier": "4.3.0",
+    "eslint-import-resolver-typescript": "1.1.1",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-jest": "22.6.4",
+    "eslint-plugin-prettier": "3.1.0"
+  },
+  "peerDependencies": {
+    "eslint": ">= 5.16.0",
+    "typescript": ">= 3.x"
+  }
+}

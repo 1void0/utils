@@ -1,12 +1,12 @@
-# commitlint-config-nova
+# @void0/commitlint-config
 
 Shareable `commitlint` config enforcing [conventional commits](https://conventionalcommits.org/).
 
 ## Getting started
 
 ```sh
-npm install --save-dev commitlint-config-nova @commitlint/cli husky
-echo "module.exports = {extends: ['commitlint-config-nova']};" > commitlint.config.js
+npm install --save-dev @void0/commitlint-config @commitlint/cli husky
+echo "module.exports = {extends: ['@void0/commitlint-config']};" > commitlint.config.js
 ```
 
 ```js
