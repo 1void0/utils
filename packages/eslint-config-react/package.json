@@ -33,6 +33,9 @@
   },
   "homepage": "https://github.com/1void0/nova-utils#readme",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@void0/eslint-config": "1.0.5",
     "eslint-plugin-jsx-a11y": "6.2.1",

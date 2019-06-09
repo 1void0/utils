@@ -33,6 +33,9 @@
     "doc": "docs"
   },
   "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@commitlint/config-conventional": "7.6.0"
   },
