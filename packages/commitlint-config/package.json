@@ -1,6 +1,6 @@
 {
   "name": "@void0/commitlint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shareable commitlint config adding content and design to conventional commits",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
