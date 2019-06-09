@@ -99,6 +99,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/tmp/circlci-now
+      - add_ssh_keys:
+          fingerprints:
+            - '25:57:d8:8b:ce:c6:83:52:d8:ad:8f:9a:78:42:ca:86T'
       - run:
           name: 'Publish to NPM'
           command: |
