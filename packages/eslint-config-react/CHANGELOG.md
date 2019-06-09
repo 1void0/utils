@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/1void0/nova-utils/compare/@void0/eslint-config-react@1.0.7...@void0/eslint-config-react@1.0.8) (2019-06-09)
+
+
+### Bug Fixes
+
+* release to NPM ([69fba3b](https://github.com/1void0/nova-utils/commit/69fba3b))
+
+
+
+
+
 ## 1.0.7 (2019-06-09)
 
 **Note:** Version bump only for package @void0/eslint-config-react
