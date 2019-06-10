@@ -1,11 +1,34 @@
-# Void0 utilities
+<p align="center">
+  <img
+    alt="Void0 utils"
+    height="120"
+    src="https://raw.githubusercontent.com/1void0/utils/master/assets/void0-utils.png"
+    width="120"
+  />
+</p>
 
-[![CircleCI](https://circleci.com/gh/1void0/utilities.svg?style=shield)](https://circleci.com/gh/1void0/utilities)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/196af0c807b054b30c75/test_coverage)](https://codeclimate.com/github/1void0/utilities/test_coverage)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=1void0/utilities)](https://dependabot.com)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+<p align="center">
+  <a href="https://circleci.com/gh/1void0/utils">
+    <img alt="CircleCI" src="https://circleci.com/gh/1void0/utils.svg?style=shield">
+  </a>
+  <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability">
+    <img alt="Maintainability" src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability">
+  </a>
+  <a href="https://codeclimate.com/github/1void0/utils/test_coverage">
+    <img alt="Test Coverage" src="https://api.codeclimate.com/v1/badges/196af0c807b054b30c75/test_coverage">
+  </a>
+</p>
+<p align="center">
+  <a href="https://dependabot.com">
+    <img alt="Dependabot Status" src="https://api.dependabot.com/badges/status?host=github&repo=1void0/utils">
+  </a>
+  <a href="http://commitizen.github.io/cz-cli/">
+    <img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg">
+  </a>
+  <a href="https://lerna.js.org/">
+    <img alt="lerna" src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg">
+  </a>
+</p>
 
 Some utilities to help you through your projects.
 

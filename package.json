@@ -1,5 +1,5 @@
 {
-  "name": "void0-utilities",
+  "name": "void0-utils",
   "version": "1.0.0",
   "description": "Some utilities to help you through your projects.",
   "private": true,
@@ -22,7 +22,7 @@
   "author": "Cédric Trigoso",
   "repository": {
     "type": "git",
-    "url": "https://github.com/1void0/utilities.git"
+    "url": "https://github.com/1void0/utils.git"
   },
   "license": "ISC",
   "devDependencies": {

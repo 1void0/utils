@@ -25,13 +25,13 @@
   "author": "Cédric Trigoso",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1void0/utilities.git",
+    "url": "git+https://github.com/1void0/utils.git",
     "directory": "packages/eslint-config-react"
   },
   "bugs": {
-    "url": "https://github.com/1void0/utilities/issues"
+    "url": "https://github.com/1void0/utils/issues"
   },
-  "homepage": "https://github.com/1void0/utilities#readme",
+  "homepage": "https://github.com/1void0/utils#readme",
   "license": "ISC",
   "publishConfig": {
     "access": "public"
