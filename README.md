@@ -11,11 +11,11 @@
   <a href="https://circleci.com/gh/1void0/utils">
     <img alt="CircleCI" src="https://circleci.com/gh/1void0/utils.svg?style=shield">
   </a>
-  <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability">
-    <img alt="Maintainability" src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability">
+  <a href="https://codeclimate.com/github/1void0/utils/maintainability">
+    <img alt="Maintainability" src="https://api.codeclimate.com/v1/badges/33ec60b64fd9407c2de5/maintainability">
   </a>
   <a href="https://codeclimate.com/github/1void0/utils/test_coverage">
-    <img alt="Test Coverage" src="https://api.codeclimate.com/v1/badges/196af0c807b054b30c75/test_coverage">
+    <img alt="Test Coverage" src="https://api.codeclimate.com/v1/badges/33ec60b64fd9407c2de5/test_coverage">
   </a>
 </p>
 <p align="center">
