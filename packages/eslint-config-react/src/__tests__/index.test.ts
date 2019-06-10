@@ -18,15 +18,13 @@ describe('@void0/eslint-config-react', (): void => {
   test('extends expected rules', async (): Promise<void> => {
     expect.hasAssertions()
 
-    eslintReactConfig.extends.forEach(
-      (name: string): void => {
-        expect(
-          name === '@void0/eslint-config' ||
-            name.includes('a11y') ||
-            name.includes('react') ||
-            name.includes('react-hooks')
-        ).toBe(true)
-      }
-    )
+    eslintReactConfig.extends.forEach((name: string): void => {
+      expect(
+        name === '@void0/eslint-config' ||
+          name.includes('a11y') ||
+          name.includes('react') ||
+          name.includes('react-hooks')
+      ).toBe(true)
+    })
   })
 })
