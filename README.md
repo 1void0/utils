@@ -30,7 +30,9 @@
   </a>
 </p>
 
-Some utilities to help you through your projects.
+<p align="center">
+  Some utilities to help you through your projects.
+</p>
 
 ## Linters
 
