@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/1void0/utils/compare/@void0/eslint-config@1.0.10...@void0/eslint-config@1.1.0) (2019-06-19)
+
+
+### Bug Fixes
+
+* **eslint-config:** add missing plugin to jsdoc config ([868729a](https://github.com/1void0/utils/commit/868729a))
+
+
+### Features
+
+* **eslint-config:** add jsdoc linting ([d816061](https://github.com/1void0/utils/commit/d816061))
+
+
+
+
+
 ## [1.0.10](https://github.com/1void0/utils/compare/@void0/eslint-config@1.0.9...@void0/eslint-config@1.0.10) (2019-06-10)
 
 **Note:** Version bump only for package @void0/eslint-config
