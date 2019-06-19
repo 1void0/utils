@@ -4,6 +4,7 @@
 /* eslint-disable import/no-commonjs */
 
 module.exports = {
+  plugins: ['jsdoc'],
   rules: {
     // Reports invalid alignment of JSDoc block asterisks
     'jsdoc/check-alignment': 'error',
