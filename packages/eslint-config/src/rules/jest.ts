@@ -25,6 +25,9 @@ module.exports = {
     // Disallow commented out tests
     'jest/no-commented-out-tests': 'error',
 
+    // Disallow duplicate hooks withing a describe block
+    'jest/no-duplicate-hooks': 'error',
+
     // Disallow empty titles
     'jest/no-empty-title': 'error',
 
