@@ -11,7 +11,7 @@ const getFiles = async (): Promise<object> =>
     fs.readdir(
       path.join(__dirname, '../rules'),
       (error, directoryFiles): void => {
-        if (error) {
+        if (typeof error !== 'undefined') {
           reject(error)
         }
 
