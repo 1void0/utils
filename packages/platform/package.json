@@ -1,0 +1,37 @@
+{
+  "name": "@void0/platform",
+  "version": "1.0.0",
+  "description": "Detects if the current code is running on client or server side.",
+  "main": "dist/server.js",
+  "browser": "dist/client.js",
+  "esnext": "dist/server.js",
+  "esnext:browser": "dist/client.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --ext .tsx --ext .ts --parser-options=tsconfigRootDir:./ --report-unused-disable-directives src/**",
+    "test": "jest",
+    "test-with-coverage": "jest --coverage"
+  },
+  "keywords": [
+    "server side",
+    "client side"
+  ],
+  "author": "Cédric Trigoso",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1void0/utils.git",
+    "directory": "packages/commitlint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/1void0/utils/issues"
+  },
+  "homepage": "https://github.com/1void0/utils#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  }
+}

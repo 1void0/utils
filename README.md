@@ -47,3 +47,9 @@ Provides a strict ESlint config TypeScript and React projects using Prettier, JS
 ### [@void0/commitlint-config](./packages/commitlint-config/)
 
 Shareable commitlint config adding `content` and `design` to conventional commits.
+
+## Helpers
+
+### [@void0/platform](./packages/platform/)
+
+Detects if the current code is running on client or server side.
