@@ -170,6 +170,9 @@ module.exports = {
     // Validate closing tag location in JSX (fixable)
     'react/jsx-closing-tag-location': 'off',
 
+    // Enforce or disallow newlines inside of curly braces in JSX attributes and expressions (fixable)
+    'react/jsx-curly-newline': 'off',
+
     // Enforce or disallow spaces inside of curly braces in JSX attributes and expressions (fixable)
     'react/jsx-curly-spacing': 'off',
 
