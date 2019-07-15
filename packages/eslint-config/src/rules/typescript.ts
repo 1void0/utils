@@ -33,6 +33,9 @@ module.exports = {
     // Require PascalCased class and interface names (class-name from TSLint)
     '@typescript-eslint/class-name-casing': 'error',
 
+    // Consistent with type definition either interface or type
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+
     // Require explicit return types on functions and class methods
     '@typescript-eslint/explicit-function-return-type': 'error',
 
@@ -63,6 +66,9 @@ module.exports = {
     // Disallow generic Array constructors
     '@typescript-eslint/no-array-constructor': 'error',
 
+    // Disallow Empty Functions
+    '@typescript-eslint/no-empty-function': 'error',
+
     // Disallow the declaration of empty interfaces (no-empty-interface from TSLint)
     '@typescript-eslint/no-empty-interface': 'error',
 
@@ -71,6 +77,9 @@ module.exports = {
 
     // Forbids the use of classes as namespaces (no-unnecessary-class from TSLint)
     '@typescript-eslint/no-extraneous-class': 'error',
+
+    // Requires Promise-like values to be handled appropriately
+    '@typescript-eslint/no-floating-promises': 'error',
 
     // Disallow iterating over an array with a for-in loop (no-for-in-array from TSLint)
     '@typescript-eslint/no-for-in-array': 'error',
@@ -98,9 +107,6 @@ module.exports = {
 
     // Disallow aliasing this (no-this-assignment from TSLint)
     '@typescript-eslint/no-this-alias': 'error',
-
-    // Disallow /// <reference path="" /> comments (no-reference from TSLint)
-    '@typescript-eslint/no-triple-slash-reference': 'error',
 
     // Disallow the use of type aliases (interface-over-type-literal from TSLint)
     '@typescript-eslint/no-type-alias': 'error',
@@ -138,6 +144,9 @@ module.exports = {
     // Require the use of the namespace keyword instead of the module keyword to declare custom TypeScript modules. (no-internal-module from TSLint)
     '@typescript-eslint/prefer-namespace-keyword': 'error',
 
+    // Require never-modified private members be marked as readonly
+    '@typescript-eslint/prefer-readonly': 'error',
+
     // Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
 
@@ -149,6 +158,18 @@ module.exports = {
 
     // When adding two variables, operands must both be of type number or of type string. (restrict-plus-operands from TSLint)
     '@typescript-eslint/restrict-plus-operands': 'error',
+
+    // Require or disallow semicolons instead of ASI
+    '@typescript-eslint/semi': 'off',
+
+    // Boolean expressions are limited to booleans
+    '@typescript-eslint/strict-boolean-expressions': 'error',
+
+    // Sets preference level for triple slash directives versus ES6-style import declarations
+    '@typescript-eslint/triple-slash-reference': [
+      'error',
+      { path: 'never', types: 'never', lib: 'never' }
+    ],
 
     // Require consistent spacing around type annotations (typedef-whitespace from TSLint)
     '@typescript-eslint/type-annotation-spacing': 'error',
