@@ -166,7 +166,7 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'error',
 
     // Sets preference level for triple slash directives versus ES6-style import declarations
-    '@typescript-eslint/no-triple-slash-reference': [
+    '@typescript-eslint/triple-slash-reference': [
       'error',
       { path: 'never', types: 'never', lib: 'never' }
     ],
