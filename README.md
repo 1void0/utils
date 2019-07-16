@@ -44,6 +44,10 @@ Provides a strict ESlint config for TypeScript projects using Prettier and JS mo
 
 Provides a strict ESlint config TypeScript and React projects using Prettier, JS modules and concerned about accessibility.
 
+### [@void0/stylelint-config](./packages/stylelint-config/)
+
+Provides a strict stylelint config for projects using Prettier.
+
 ### [@void0/commitlint-config](./packages/commitlint-config/)
 
 Shareable commitlint config adding `content` and `design` to conventional commits.

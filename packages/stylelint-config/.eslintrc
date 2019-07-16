@@ -1,6 +1,6 @@
 {
   "extends": ["@void0/eslint-config"],
   "parserOptions": {
-    "tsconfigRootDir": "./packages/platform/"
+    "tsconfigRootDir": "./packages/stylelint-config/"
   }
 }

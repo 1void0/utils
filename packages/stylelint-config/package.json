@@ -1,11 +1,8 @@
 {
-  "name": "@void0/platform",
+  "name": "@void0/stylelint-config",
   "version": "1.0.0",
-  "description": "Detects if the current code is running on client or server side.",
-  "main": "dist/server.js",
-  "browser": "dist/client.js",
-  "esnext": "dist/server.js",
-  "esnext:browser": "dist/client.js",
+  "description": "Strict stylelint config for projects using Prettier.",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
@@ -14,26 +11,32 @@
     "test-with-coverage": "jest --coverage"
   },
   "keywords": [
-    "server",
-    "client",
-    "serverside",
-    "clientside"
+    "stylelint",
+    "stylelintconfig",
+    "prettier"
   ],
   "author": "Cédric Trigoso",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/1void0/utils.git",
-    "directory": "packages/platform"
+    "directory": "packages/stylelint-config"
   },
   "bugs": {
     "url": "https://github.com/1void0/utils/issues"
   },
   "homepage": "https://github.com/1void0/utils#readme",
-  "directories": {
-    "doc": "docs"
-  },
   "license": "ISC",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "stylelint-a11y": "1.2.1",
+    "stylelint-config-prettier": "5.2.0",
+    "stylelint-order": "3.0.1",
+    "stylelint-prettier": "1.1.1"
+  },
+  "peerDependencies": {
+    "prettier": ">= 1.18.0",
+    "stylelint": ">= 10.0.0"
   }
 }
