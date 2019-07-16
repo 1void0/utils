@@ -2,7 +2,6 @@
 
 /* eslint-disable import/unambiguous */
 /* eslint-disable import/no-commonjs */
-/* eslint-disable sort-keys */
 
 module.exports = {
   plugins: ['stylelint-a11y'],
