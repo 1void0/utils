@@ -19,8 +19,8 @@ module.exports = {
     './rules/typescript',
     './rules/import',
     './rules/jest',
-    './rules/prettier',
-    './rules/jsdoc'
+    './rules/jsdoc',
+    './rules/prettier'
   ].map((file: string): string => require.resolve(file)),
   parserOptions: {
     ecmaVersion: 2019 // Allows for the parsing of modern ECMAScript features
