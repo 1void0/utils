@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/1void0/utils/compare/@void0/commitlint-config@1.0.5...@void0/commitlint-config@1.1.0) (2019-07-16)
+
+
+### Features
+
+* **stylelint-config:** add a stylelint-config package ([#96](https://github.com/1void0/utils/issues/96)) ([606bbb4](https://github.com/1void0/utils/commit/606bbb4))
+
+
+
+
+
 ## [1.0.5](https://github.com/1void0/utils/compare/@void0/commitlint-config@1.0.4...@void0/commitlint-config@1.0.5) (2019-06-10)
 
 **Note:** Version bump only for package @void0/commitlint-config
