@@ -1,6 +1,6 @@
 {
   "name": "@void0/eslint-config-react",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Strict ESlint config for TypeScript and React projects using Prettier, JS modules and concerned about accessibility.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -37,7 +37,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@void0/eslint-config": "^2.0.0",
+    "@void0/eslint-config": "^2.0.1",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.14.2",
     "eslint-plugin-react-hooks": "1.6.1"

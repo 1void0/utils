@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/1void0/utils/compare/@void0/eslint-config@2.0.0...@void0/eslint-config@2.0.1) (2019-08-01)
+
+
+### Bug Fixes
+
+* **eslint-config:** remove rule conflicting with another rule ([f4c4b25](https://github.com/1void0/utils/commit/f4c4b25))
+
+
+
+
+
 # [2.0.0](https://github.com/1void0/utils/compare/@void0/eslint-config@1.0.10...@void0/eslint-config@2.0.0) (2019-07-16)
 
 
