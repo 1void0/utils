@@ -52,7 +52,17 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 'error',
 
     // Require a specific member delimiter style for interfaces and type literals
-    '@typescript-eslint/member-delimiter-style': 'error',
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
+      {
+        multiline: {
+          delimiter: 'none'
+        },
+        singleline: {
+          delimiter: 'none'
+        }
+      }
+    ],
 
     // Enforces naming conventions for class members by visibility.
     '@typescript-eslint/member-naming': 'error',
