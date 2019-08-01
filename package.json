@@ -8,7 +8,7 @@
     "build": "lerna run build",
     "commit": "git-cz",
     "lint": "lerna run lint",
-    "release": "lerna publish",
+    "release": "lerna run build && lerna publish",
     "test": "lerna run test-with-coverage"
   },
   "keywords": [

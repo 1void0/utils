@@ -54,7 +54,7 @@ module.exports = {
     // Require a specific member delimiter style for interfaces and type literals
     '@typescript-eslint/member-delimiter-style': 'off',
 
-    // Enforces naming conventions for class members by visibility.
+    // Enforces naming conventions for class members by visibility
     '@typescript-eslint/member-naming': 'error',
 
     // Require a consistent member declaration order (member-ordering from TSLint)
