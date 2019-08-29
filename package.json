@@ -53,7 +53,7 @@
     "react": "16.8.6",
     "stylelint": "10.1.0",
     "ts-jest": "24.0.2",
-    "typescript": "3.5.3"
+    "typescript": "3.6.2"
   },
   "dependencies": {
     "@void0/commitlint-config": "file:packages/commitlint-config",
