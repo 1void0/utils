@@ -37,7 +37,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@commitlint/config-conventional": "8.1.0"
+    "@commitlint/config-conventional": "9.0.1"
   },
   "peerDependencies": {
     "@commitlint/cli": "8.0.0"
