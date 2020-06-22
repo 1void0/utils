@@ -25,20 +25,29 @@ module.exports = {
     // Disallow commented out tests
     'jest/no-commented-out-tests': 'error',
 
+    // Prevent calling expect conditionally
+    'jest/no-conditional-expect': 'error',
+
+    // Disallow use of deprecated functions
+    'jest/no-deprecated-functions': 'error',
+
     // Disallow duplicate hooks withing a describe block
     'jest/no-duplicate-hooks': 'error',
 
-    // Disallow empty titles
-    'jest/no-empty-title': 'error',
+    // Prevent exporting from test files
+    'jest/no-export': 'error',
 
     // Disallow focused tests
     'jest/no-focused-tests': 'error',
 
     // Disallow setup and teardown hooks
-    'jest/no-hooks': 'error',
+    'jest/no-hooks': 'off',
 
     // Disallow identical titles
     'jest/no-identical-title': 'error',
+
+    // Disallow conditional logic
+    'jest/no-if': 'error',
 
     // Disallow Jasmine globals
     'jest/no-jasmine-globals': 'error',
@@ -48,6 +57,12 @@ module.exports = {
 
     // Disallow manually importing from __mocks__
     'jest/no-mocks-import': 'error',
+
+    // Disallow specific matchers & modifiers
+    'jest/no-restricted-matchers': 'error',
+
+    // Prevents expects that are outside of an it or test block.
+    'jest/no-standalone-expect': 'error',
 
     // Disallow large snapshots
     'jest/no-large-snapshots': 'off',
@@ -61,11 +76,11 @@ module.exports = {
     // Disallow explicitly returning from tests
     'jest/no-test-return-statement': 'error',
 
-    // Disallow using toBeTruthy() & toBeFalsy()
-    'jest/no-truthy-falsy': 'error',
-
     // Suggest using expect.assertions() OR expect.hasAssertions()
     'jest/prefer-expect-assertions': 'error',
+
+    // Suggest to have all hooks at top level
+    'jest/prefer-hooks-on-top': 'error',
 
     // Suggest using jest.spyOn()
     'jest/prefer-spy-on': 'error',
@@ -85,12 +100,6 @@ module.exports = {
     // Suggest using toHaveLength()
     'jest/prefer-to-have-length': 'error',
 
-    // Suggest using toMatchInlineSnapshot()
-    'jest/prefer-inline-snapshots': 'error',
-
-    // Require that toThrow() and toThrowError includes a message
-    'jest/require-tothrow-message': 'error',
-
     // Enforce valid describe() callback
     'jest/valid-describe': 'error',
 
@@ -103,7 +112,16 @@ module.exports = {
     // Suggest using test.todo()
     'jest/prefer-todo': 'error',
 
+    // Require a message for toThrow()
+    'jest/require-to-throw-message': 'error',
+
+    // Prevents test cases and hooks to be outside of a describe block
+    'jest/require-top-level-describe': 'error',
+
     // Suggest using toBeCalledWith() OR toHaveBeenCalledWith()
-    'jest/prefer-called-with': 'error'
-  }
+    'jest/prefer-called-with': 'error',
+
+    // Enforce valid titles
+    'jest/valid-title': 'error',
+  },
 }

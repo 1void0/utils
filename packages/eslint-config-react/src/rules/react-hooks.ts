@@ -10,6 +10,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
 
     // Checks rules of Hooks
-    'react-hooks/rules-of-hooks': 'error'
-  }
+    'react-hooks/rules-of-hooks': 'error',
+  },
 }

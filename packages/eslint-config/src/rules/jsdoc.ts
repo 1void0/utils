@@ -6,6 +6,9 @@
 module.exports = {
   plugins: ['jsdoc'],
   rules: {
+    // Checks that @access tags use one of the following values
+    'jsdoc/check-access': 'error',
+
     // Reports invalid alignment of JSDoc block asterisks
     'jsdoc/check-alignment': 'error',
 
@@ -18,6 +21,9 @@ module.exports = {
     // Reports invalid padding inside JSDoc block
     'jsdoc/check-param-names': 'error',
 
+    // Ensures that property names in JSDoc are not duplicated on the same block and that nested properties have defined roots.
+    'jsdoc/check-property-names': 'error',
+
     // Reports against Google Closure Compiler syntax
     'jsdoc/check-syntax': 'error',
 
@@ -26,6 +32,12 @@ module.exports = {
 
     // Reports invalid types
     'jsdoc/check-types': 'error',
+
+    // Checks the values for a handful of tag
+    'jsdoc/check-values': 'error',
+
+    // Expects some tags to be empty of any content
+    'jsdoc/empty-tags': 'error',
 
     // Reports an issue with any non-constructor function using @implements
     'jsdoc/implements-on-classes': 'error',
@@ -39,9 +51,9 @@ module.exports = {
           argument: true,
           param: true,
           return: true,
-          returns: true
-        }
-      }
+          returns: true,
+        },
+      },
     ],
 
     // Enforces a consistent padding of the block description
@@ -62,6 +74,9 @@ module.exports = {
     // Requires that all functions have examples
     'jsdoc/require-example': 'off',
 
+    // Ensure that all files have a @file, @fileoverview, or @overview tag.
+    'jsdoc/require-file-overview': 'off',
+
     // Requires a hyphen before the @param description
     'jsdoc/require-hyphen-before-param-description': 'error',
 
@@ -80,6 +95,18 @@ module.exports = {
     // Requires that @param tag has type value
     'jsdoc/require-param-type': 'off',
 
+    // Requires that all @typedef and @namespace tags have @property when their type is a plain object, Object, or PlainObject.
+    'jsdoc/require-property': 'error',
+
+    // Requires that each @property tag has a description value.
+    'jsdoc/require-property-description': 'error',
+
+    // Requires that all function @property tags have names.
+    'jsdoc/require-property-name': 'error',
+
+    // Requires that each @property tag has a type value.
+    'jsdoc/require-property-type': 'off',
+
     // Requires returns are documented
     'jsdoc/require-returns': 'error',
 
@@ -92,7 +119,10 @@ module.exports = {
     // Requires that @returns tag has type value
     'jsdoc/require-returns-type': 'off',
 
+    // Requires that throw statements are documented.
+    'jsdoc/require-throws': 'error',
+
     // Requires all types to be valid JSDoc or Closure compiler types without syntax errors
-    'jsdoc/valid-types': 'error'
-  }
+    'jsdoc/valid-types': 'error',
+  },
 }

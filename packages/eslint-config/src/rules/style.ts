@@ -23,7 +23,7 @@ module.exports = {
     'func-names': ['error', 'as-needed'],
 
     // Enforce the consistent use of either function declarations or expressions
-    'func-style': ['error', 'expression'],
+    'func-style': ['error', 'declaration'],
 
     // Disallow specified identifiers
     'id-blacklist': 'off',
@@ -62,7 +62,7 @@ module.exports = {
     'max-statements-per-line': 'off',
 
     // Enforce a particular style for multiline comments
-    'multiline-comment-style': 'error',
+    'multiline-comment-style': ['error', 'separate-lines'],
 
     // Require constructor names to begin with a capital letter
     'new-cap': 'error',
@@ -124,6 +124,9 @@ module.exports = {
     // Require or disallow padding lines between statements
     'padding-line-between-statements': 'off',
 
+    // Disallow the use of `Math.pow` in favor of the `**` operator
+    'prefer-exponentiation-operator': 'error',
+
     // Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead
     'prefer-object-spread': 'error',
 
@@ -134,6 +137,6 @@ module.exports = {
     'sort-vars': 'error',
 
     // Enforce consistent spacing after the // or /* in a comment
-    'spaced-comment': 'error'
-  }
+    'spaced-comment': 'error',
+  },
 }

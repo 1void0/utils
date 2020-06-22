@@ -107,6 +107,6 @@ module.exports = {
     'no-extra-semicolons': true,
 
     // Disallow double-slash comments (//...) which are not supported by CSS.
-    'no-invalid-double-slash-comments': true
-  }
+    'no-invalid-double-slash-comments': true,
+  },
 }

@@ -10,6 +10,6 @@ module.exports = {
     './rules/style',
     './rules/order',
     './rules/a11y',
-    './rules/prettier'
-  ].map((file: string): string => require.resolve(file))
+    './rules/prettier',
+  ].map((file: string): string => require.resolve(file)),
 }

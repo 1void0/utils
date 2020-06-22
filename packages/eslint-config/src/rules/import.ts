@@ -6,7 +6,7 @@
 
 module.exports = {
   parserOptions: {
-    sourceType: 'module' // Allows for the use of imports
+    sourceType: 'module', // Allows for the use of imports
   },
   plugins: ['import'],
   rules: {
@@ -14,12 +14,10 @@ module.exports = {
 
     // Reports modules without any exports and individual exports not being statically imported or requireed from other modules in the same project
     'import/no-unused-modules': 'off',
-    /*
-     * 'import/no-unused-modules': [
-     *   'error',
-     *   { missingExports: true, unusedExports: true }
-     * ],
-     */
+    // 'import/no-unused-modules': [
+    //   'error',
+    //   { missingExports: true, unusedExports: true }
+    // ],
 
     // Ensure imports point to a file/module that can be resolved
     'import/no-unresolved': 'error',
@@ -112,7 +110,7 @@ module.exports = {
     'import/extensions': [
       'error',
       'always',
-      { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }
+      { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' },
     ],
 
     // Enforce a convention in module import order
@@ -146,11 +144,11 @@ module.exports = {
     'import/group-exports': 'error',
 
     // Enforce a leading comment with the webpackChunkName for dynamic imports
-    'import/dynamic-import-chunkname': 'error'
+    'import/dynamic-import-chunkname': 'error',
   },
   settings: {
     'import/resolver': {
-      typescript: {}
-    }
-  }
+      typescript: {},
+    },
+  },
 }

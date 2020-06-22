@@ -6,8 +6,8 @@
 module.exports = {
   parserOptions: {
     ecmaFeatures: {
-      jsx: true // Allows for the parsing of JSX
-    }
+      jsx: true, // Allows for the parsing of JSX
+    },
   },
   plugins: ['jsx-a11y'],
   rules: {
@@ -37,6 +37,9 @@ module.exports = {
 
     // Enforce that elements that do not support ARIA roles, states, and properties do not have those attributes.
     'jsx-a11y/aria-unsupported-elements': 'error',
+
+    // Enforce that autocomplete attributes are used correctly.
+    'jsx-a11y/autocomplete-valid': 'error',
 
     // Enforce a clickable non-interactive element has at least one keyboard event listener.
     'jsx-a11y/click-events-have-key-events': 'error',
@@ -108,6 +111,6 @@ module.exports = {
     'jsx-a11y/scope': 'error',
 
     // Enforce tabIndex value is not greater than zero.
-    'jsx-a11y/tabindex-no-positive': 'error'
-  }
+    'jsx-a11y/tabindex-no-positive': 'error',
+  },
 }

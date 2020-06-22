@@ -7,8 +7,8 @@
 module.exports = {
   parserOptions: {
     ecmaFeatures: {
-      jsx: true // Allows for the parsing of JSX
-    }
+      jsx: true, // Allows for the parsing of JSX
+    },
   },
   plugins: ['react'],
   rules: {
@@ -42,8 +42,14 @@ module.exports = {
     // Forbid foreign propTypes
     'react/forbid-foreign-prop-types': 'error',
 
+    // Standardize the way function component get defined
+    'react/function-component-definition': 'error',
+
     // Prevent using this.state inside this.setState
     'react/no-access-state-in-setstate': 'error',
+
+    // Prevent adjacent inline elements not separated by whitespace.
+    'react/no-adjacent-inline-elements': 'off',
 
     // Prevent using Array index in key props
     'react/no-array-index-key': 'error',
@@ -99,7 +105,7 @@ module.exports = {
     // Prevent invalid characters from appearing in markup
     'react/no-unescaped-entities': 'error',
 
-    // Prevent usage of unknown DOM property (fixable)
+    // Prevent usage of unknown DOM property
     'react/no-unknown-property': 'error',
 
     // Prevent usage of unsafe lifecycle methods
@@ -116,6 +122,9 @@ module.exports = {
 
     // Enforce ES5 or ES6 class for React Components
     'react/prefer-es6-class': 'error',
+
+    // Require read-only props
+    'react/prefer-read-only-props': 'error',
 
     // Enforce stateless React Components to be written as a pure function
     'react/prefer-stateless-function': 'error',
@@ -215,11 +224,17 @@ module.exports = {
     // Prevent usage of unwrapped JSX strings
     'react/jsx-no-literals': 'off',
 
+    // Forbid javascript: URLs
+    'react/jsx-no-script-url': 'error',
+
     // Prevent usage of unsafe target='_blank'
     'react/jsx-no-target-blank': 'error',
 
     // Disallow undeclared variables in JSX
     'react/jsx-no-undef': 'error',
+
+    // Disallow unnecessary fragments
+    'react/jsx-no-useless-fragment': 'error',
 
     // Limit to one expression per line in JSX
     'react/jsx-one-expression-per-line': 'off',
@@ -245,9 +260,6 @@ module.exports = {
     // Enforce props alphabetical sorting (fixable)
     'react/jsx-sort-props': 'error',
 
-    // Validate spacing before closing bracket in JSX (fixable)
-    'react/jsx-space-before-closing': 'off',
-
     // Validate whitespace in and around the JSX opening and closing brackets (fixable)
     'react/jsx-tag-spacing': 'off',
 
@@ -258,11 +270,11 @@ module.exports = {
     'react/jsx-uses-vars': 'error',
 
     // Prevent missing parentheses around multilines JSX (fixable)
-    'react/jsx-wrap-multilines': 'off'
+    'react/jsx-wrap-multilines': 'off',
   },
   settings: {
     react: {
-      version: 'detect' // Tells eslint-plugin-react to automatically detect the version of React to use
-    }
-  }
+      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
+  },
 }

@@ -4,5 +4,5 @@
 /* eslint-disable import/no-commonjs */
 
 module.exports = {
-  extends: ['@void0/commitlint-config', '@commitlint/config-lerna-scopes']
+  extends: ['@void0/commitlint-config', '@commitlint/config-lerna-scopes'],
 }

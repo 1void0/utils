@@ -1,20 +1,17 @@
 /* eslint-env jest */
 
-/* eslint-disable import/unambiguous */
-/* eslint-disable import/no-commonjs */
-
 /* eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
-const commitlintConfig = require('./')
+const commitlintConfig = require('.')
 
-describe('@void0/commitlint-config', (): void => {
-  test('extends @commitlint/config-conventional', (): void => {
+describe('@void0/commitlint-config', () => {
+  test('extends @commitlint/config-conventional', () => {
     expect.assertions(1)
     expect(commitlintConfig.extends).toContain(
       '@commitlint/config-conventional'
     )
   })
 
-  test('rules', (): void => {
+  test('rules', () => {
     expect.assertions(1)
     expect(commitlintConfig.rules['type-enum'][2]).toStrictEqual([
       'build',
@@ -29,7 +26,7 @@ describe('@void0/commitlint-config', (): void => {
       'refactor',
       'revert',
       'style',
-      'test'
+      'test',
     ])
   })
 })

@@ -1,6 +1,13 @@
 {
   "extends": ["@void0/eslint-config"],
+  "env": {
+    "commonjs": true
+  },
   "parserOptions": {
     "tsconfigRootDir": "./packages/commitlint-config/"
+  },
+  "rules": {
+    "import/unambiguous": "off",
+    "import/no-commonjs": "off"
   }
 }

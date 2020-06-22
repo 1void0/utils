@@ -29,6 +29,12 @@ module.exports = {
     // Require default cases in switch statements
     'default-case': 'error',
 
+    // Enforce default clauses in switch statements to be last
+    'default-case-last': 'error',
+
+    // Enforce default parameters to be last
+    'default-param-last': 'error',
+
     // Enforce consistent newlines before and after dots
     'dot-location': 'off',
 
@@ -37,6 +43,9 @@ module.exports = {
 
     // Require the use of === and !==
     eqeqeq: 'error',
+
+    // Require grouped accessor pairs in object literals and classes
+    'grouped-accessor-pairs': 'error',
 
     // Require for-in loops to include an if statement
     'guard-for-in': 'error',
@@ -52,6 +61,9 @@ module.exports = {
 
     // Disallow lexical declarations in case clauses
     'no-case-declarations': 'error',
+
+    // Disallow returning value from constructor
+    'no-constructor-return': 'error',
 
     // Disallow division operators explicitly at the beginning of regular expressions
     'no-div-regex': 'error',
@@ -209,6 +221,9 @@ module.exports = {
     // Require using Error objects as Promise rejection reasons
     'prefer-promise-reject-errors': 'error',
 
+    // Disallow use of the `RegExp` constructor in favor of regular expression literals
+    'prefer-regex-literals': 'error',
+
     // Enforce the consistent use of the radix argument when using parseInt()
     radix: 'error',
 
@@ -225,6 +240,6 @@ module.exports = {
     'wrap-iife': 'error',
 
     // Require or disallow “Yoda” conditions
-    yoda: 'error'
-  }
+    yoda: 'error',
+  },
 }

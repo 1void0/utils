@@ -38,8 +38,11 @@ module.exports = {
     // Disallow new operators with the Symbol object
     'no-new-symbol': 'error',
 
+    // Disallow specified names in exports
+    'no-restricted-exports': 'off',
+
     // Disallow specified modules when loaded by import
-    'no-restricted-imports': 'error',
+    'no-restricted-imports': 'off',
 
     // Disallow this/super before calling super() in constructors
     'no-this-before-super': 'error',
@@ -96,6 +99,6 @@ module.exports = {
     'template-curly-spacing': 'error',
 
     // Require or disallow spacing around the * in yield* expressions
-    'yield-star-spacing': 'error'
-  }
+    'yield-star-spacing': 'error',
+  },
 }

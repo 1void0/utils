@@ -15,15 +15,11 @@ module.exports = {
     // Disallow not vertical rhythmed line-height
     'a11y/line-height-is-vertical-rhythmed': true,
 
-    /*
-     * Require certain styles if the animation or transition in media features
-     * 'a11y/media-prefers-reduced-motion': true,
-     */
+    // Require certain styles if the animation or transition in media features
+    // 'a11y/media-prefers-reduced-motion': true,
 
-    /*
-     * Require implementation of certain styles for selectors with colors.
-     * 'a11y/media-prefers-color-scheme': true,
-     */
+    // Require implementation of certain styles for selectors with colors.
+    // 'a11y/media-prefers-color-scheme': true,
 
     // Disallow content hiding with display: none property
     'a11y/no-display-none': true,
@@ -34,10 +30,8 @@ module.exports = {
     // Disallow obsolete selectors using
     'a11y/no-obsolete-element': true,
 
-    /*
-     * Require width of text in a comfortable range
-     * 'a11y/no-spread-text': true,
-     */
+    // Require width of text in a comfortable range
+    // 'a11y/no-spread-text': true,
 
     // Disallow outline clearing
     'a11y/no-outline-none': true,
@@ -46,6 +40,6 @@ module.exports = {
     'a11y/no-text-align-justify': true,
 
     // Require or disallow a pseudo-element to the selectors with :hover
-    'a11y/selector-pseudo-class-focus': true
-  }
+    'a11y/selector-pseudo-class-focus': true,
+  },
 }

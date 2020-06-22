@@ -12,13 +12,12 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "outDir": "dist",
-    "rootDir": "src",
     "sourceMap": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "target": "es5"
   },
-  "include": ["src/**/*.js"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["**.*.js"],
+  "exclude": ["node_modules", "dist", "packages"]
 }

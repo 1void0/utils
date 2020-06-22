@@ -33,10 +33,8 @@ module.exports = {
 
     // -- Keyframes
 
-    /*
-     * Specify a pattern for keyframe names.
-     * 'keyframes-name-pattern': '',
-     */
+    // Specify a pattern for keyframe names.
+    // 'keyframes-name-pattern': '',
 
     // -- Number
 
@@ -68,10 +66,8 @@ module.exports = {
 
     // -- Custom property
 
-    /*
-     * Specify a pattern for custom properties.
-     * 'custom-property-pattern': true,
-     */
+    // Specify a pattern for custom properties.
+    // 'custom-property-pattern': true,
 
     // -- Property
 
@@ -117,10 +113,8 @@ module.exports = {
     // Specify a whitelist of allowed attribute operators.
     'selector-attribute-operator-whitelist': [],
 
-    /*
-     * Specify a pattern for class selectors.
-     * 'selector-class-pattern': '',
-     */
+    // Specify a pattern for class selectors.
+    // 'selector-class-pattern': '',
 
     // Specify a blacklist of disallowed combinators.
     'selector-combinator-blacklist': [],
@@ -128,65 +122,41 @@ module.exports = {
     // Specify a whitelist of allowed combinators.
     'selector-combinator-whitelist': [],
 
-    /*
-     * Specify a pattern for ID selectors.
-     * 'selector-id-pattern': '',
-     */
+    // Specify a pattern for ID selectors.
+    // 'selector-id-pattern': '',
 
-    /*
-     * Limit the number of attribute selectors in a selector.
-     * 'selector-max-attribute': 5,
-     */
+    // Limit the number of attribute selectors in a selector.
+    // 'selector-max-attribute': 5,
 
-    /*
-     * Limit the number of classes in a selector.
-     * 'selector-max-class': 7,
-     */
+    // Limit the number of classes in a selector.
+    // 'selector-max-class': 7,
 
-    /*
-     * Limit the number of combinators in a selector.
-     * 'selector-max-combinators': 5,
-     */
+    // Limit the number of combinators in a selector.
+    // 'selector-max-combinators': 5,
 
-    /*
-     * Limit the number of compound selectors in a selector.
-     * 'selector-max-compound-selectors': 7,
-     */
+    // Limit the number of compound selectors in a selector.
+    // 'selector-max-compound-selectors': 7,
 
-    /*
-     * Limit the number of adjacent empty lines within selectors (Autofixable).
-     * 'selector-max-empty-lines': 0,
-     */
+    // Limit the number of adjacent empty lines within selectors (Autofixable).
+    // 'selector-max-empty-lines': 0,
 
-    /*
-     * Limit the number of ID selectors in a selector.
-     * 'selector-max-id': 5,
-     */
+    // Limit the number of ID selectors in a selector.
+    // 'selector-max-id': 5,
 
-    /*
-     * Limit the number of pseudo-classes in a selector.
-     * 'selector-max-pseudo-class': 3,
-     */
+    // Limit the number of pseudo-classes in a selector.
+    // 'selector-max-pseudo-class': 3,
 
-    /*
-     * Limit the specificity of selectors.
-     * 'selector-max-specificity': 8,
-     */
+    // Limit the specificity of selectors.
+    // 'selector-max-specificity': 8,
 
-    /*
-     * Limit the number of type in a selector.
-     * 'selector-max-type': 10,
-     */
+    // Limit the number of type in a selector.
+    // 'selector-max-type': 10,
 
-    /*
-     * Limit the number of universal selectors in a selector.
-     * 'selector-max-universal': 3,
-     */
+    // Limit the number of universal selectors in a selector.
+    // 'selector-max-universal': 3,
 
-    /*
-     * Specify a pattern for the selectors of rules nested within rules.
-     * 'selector-nested-pattern': '',
-     */
+    // Specify a pattern for the selectors of rules nested within rules.
+    // 'selector-nested-pattern': '',
 
     // Disallow qualifying a selector by type.
     'selector-no-qualifying-type': false,
@@ -246,12 +216,10 @@ module.exports = {
 
     // -- General / Sheet
 
-    /*
-     * Limit the depth of nesting.
-     * 'max-nesting-depth': 10,
-     */
+    // Limit the depth of nesting.
+    // 'max-nesting-depth': 10,
 
     // Disallow unknown animations.
-    'no-unknown-animations': true
-  }
+    'no-unknown-animations': true,
+  },
 }
