@@ -7,6 +7,8 @@
     "bootstrap": "lerna bootstrap --hoist",
     "build": "lerna run build",
     "commit": "git-cz",
+    "eslint-find-deprecated-rules": "lerna run eslint-find-deprecated-rules --stream --no-bail",
+    "eslint-find-unused-rules": "lerna run eslint-find-unused-rules --stream --no-bail",
     "lint": "lerna run lint",
     "release": "lerna run build && lerna publish",
     "test": "lerna run test-with-coverage"
