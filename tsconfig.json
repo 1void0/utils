@@ -6,7 +6,6 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "inlineSourceMap": false,
-    "jsx": "preserve",
     "lib": ["esnext", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
