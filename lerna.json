@@ -1,7 +1,4 @@
 {
-  "packages": ["packages/*"],
-  "version": "independent",
-  "npmClient": "npm",
   "command": {
     "publish": {
       "ignoreChanges": ["ignored-file", "*.md"],
@@ -12,5 +9,9 @@
     "bootstrap": {
       "npmClientArgs": ["--no-package-lock"]
     }
-  }
+  },
+  "npmClient": "yarn",
+  "packages": ["packages/*"],
+  "useWorkspaces": true,
+  "version": "independent"
 }

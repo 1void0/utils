@@ -4,7 +4,7 @@
   "description": "Some utilities to help you through your projects.",
   "private": true,
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap --use-workspaces",
     "build": "lerna run build",
     "commit": "git-cz",
     "eslint-find-deprecated-rules": "lerna run eslint-find-deprecated-rules --stream --no-bail",
@@ -71,5 +71,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
