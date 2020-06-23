@@ -16,8 +16,8 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      # - attach_workspace:
-      #     at: ~/tmp/circlci-now
+      - attach_workspace:
+          at: ~/tmp/circlci-now
       - restore_cache:
           keys:
             - npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
@@ -51,8 +51,8 @@ jobs:
   lint:
     <<: *defaults
     steps:
-      # - attach_workspace:
-      #     at: ~/tmp/circlci-now
+      - attach_workspace:
+          at: ~/tmp/circlci-now
       - run:
           name: 'Lint'
           command: |
@@ -61,8 +61,8 @@ jobs:
   unit-tests:
     <<: *defaults
     steps:
-      # - attach_workspace:
-      #     at: ~/tmp/circlci-now
+      - attach_workspace:
+          at: ~/tmp/circlci-now
       - run:
           name: 'Unit tests'
           command: |
