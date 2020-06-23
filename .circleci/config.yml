@@ -27,12 +27,11 @@ jobs:
       - run:
           name: 'Install dependencies'
           command: |
-            npm install
-            npm run bootstrap
+            yarn bootstrap
       - run:
           name: 'Build projects'
           command: |
-            npm run build
+            yarn build
       - run:
           name: Install Code Climate test-reporter
           command: |
@@ -56,7 +55,7 @@ jobs:
       - run:
           name: 'Lint'
           command: |
-            npm run lint
+            yarn lint
 
   unit-tests:
     <<: *defaults
@@ -67,7 +66,7 @@ jobs:
           name: 'Unit tests'
           command: |
             ./tmp/cc-test-reporter before-build
-            npm test
+            yarn test
             for f in packages/*; do
               if [ -d "$f" ]; then
                 echo $f
