@@ -15,7 +15,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": ".",
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
@@ -25,12 +25,5 @@
     "target": "es5"
   },
   "include": ["**.*.js"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "packages",
-    ".eslintrc.js",
-    "commitlint.config.js",
-    "prettier.config.js"
-  ]
+  "exclude": ["node_modules", "dist", "packages"]
 }
