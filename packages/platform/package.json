@@ -35,5 +35,8 @@
   "license": "ISC",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@void0/eslint-config": "2.1.1"
   }
 }
