@@ -71,6 +71,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "@void0/commitlint-config": "1.2.1",
     "@void0/eslint-config": "2.1.1"
   }
 }
