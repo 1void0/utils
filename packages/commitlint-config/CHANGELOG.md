@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/1void0/utils/compare/@void0/commitlint-config@1.2.1...@void0/commitlint-config@1.2.2) (2020-06-23)
+
+
+### Bug Fixes
+
+* broken tests and linting ([#485](https://github.com/1void0/utils/issues/485)) ([52922f1](https://github.com/1void0/utils/commit/52922f190f818fc98eafa662a206af2bd18e6fa9))
+
+
+
+
+
 ## [1.2.1](https://github.com/1void0/utils/compare/@void0/commitlint-config@1.2.0...@void0/commitlint-config@1.2.1) (2020-06-23)
 
 **Note:** Version bump only for package @void0/commitlint-config
