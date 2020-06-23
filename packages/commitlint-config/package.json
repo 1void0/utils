@@ -39,6 +39,9 @@
   "dependencies": {
     "@commitlint/config-conventional": "9.0.1"
   },
+  "devDependencies": {
+    "@void0/eslint-config": "2.1.1"
+  },
   "peerDependencies": {
     "@commitlint/cli": ">= 9.0.0"
   }

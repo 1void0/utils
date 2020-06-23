@@ -27,18 +27,18 @@ jobs:
       - run:
           name: 'Install dependencies'
           command: |
-            npm install
-            npm run bootstrap
+            yarn
+            yarn bootstrap
       - run:
           name: 'Build projects'
           command: |
-            npm run build
-      - run:
-          name: Install Code Climate test-reporter
-          command: |
-            mkdir -p tmp/
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
-            chmod +x ./tmp/cc-test-reporter
+            yarn build
+      # - run:
+      #     name: Install Code Climate test-reporter
+      #     command: |
+      #       mkdir -p tmp/
+      #       curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
+      #       chmod +x ./tmp/cc-test-reporter
       - save_cache:
           key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
@@ -56,7 +56,7 @@ jobs:
       - run:
           name: 'Lint'
           command: |
-            npm run lint
+            yarn lint
 
   unit-tests:
     <<: *defaults
@@ -66,18 +66,17 @@ jobs:
       - run:
           name: 'Unit tests'
           command: |
-            ./tmp/cc-test-reporter before-build
-            npm test
-            for f in packages/*; do
-              if [ -d "$f" ]; then
-                echo $f
-                if [ -d "$f/coverage" ]; then
-                  ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/coverage.${f//\//-}.json $f/coverage/lcov.info
-                fi
-              fi
-            done;
-            ./tmp/cc-test-reporter sum-coverage -o tmp/coverage.total.json tmp/coverage.*.json
-            ./tmp/cc-test-reporter upload-coverage -i tmp/coverage.total.json -r $CC_TEST_REPORTER_ID
+            yarn test
+          # for f in packages/*; do
+          #   if [ -d "$f" ]; then
+          #     echo $f
+          #     if [ -d "$f/coverage" ]; then
+          #       ./tmp/cc-test-reporter format-coverage -t lcov -o tmp/coverage.${f//\//-}.json $f/coverage/lcov.info
+          #     fi
+          #   fi
+          # done;
+          # ./tmp/cc-test-reporter sum-coverage -o tmp/coverage.total.json tmp/coverage.*.json
+          # ./tmp/cc-test-reporter upload-coverage -i tmp/coverage.total.json -r $CC_TEST_REPORTER_ID
 
 workflows:
   version: 2
