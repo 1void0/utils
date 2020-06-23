@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/1void0/utils/compare/@void0/eslint-config@2.1.1...@void0/eslint-config@2.2.0) (2020-06-23)
+
+
+### Features
+
+* bump version ([fb8620d](https://github.com/1void0/utils/commit/fb8620d1652219c3dd5f38ab511fab6f83b10fc4))
+
+
+
+
+
 ## [2.1.1](https://github.com/1void0/utils/compare/@void0/eslint-config@2.1.0...@void0/eslint-config@2.1.1) (2020-06-23)
 
 **Note:** Version bump only for package @void0/eslint-config
