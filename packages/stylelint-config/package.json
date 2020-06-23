@@ -1,6 +1,6 @@
 {
   "name": "@void0/stylelint-config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Strict stylelint config for projects using Prettier.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

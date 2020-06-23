@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/1void0/utils/compare/@void0/eslint-config-react@1.1.0...@void0/eslint-config-react@1.1.1) (2020-06-23)
+
+**Note:** Version bump only for package @void0/eslint-config-react
+
+
+
+
+
 # [1.1.0](https://github.com/1void0/utils/compare/@void0/eslint-config-react@1.0.17...@void0/eslint-config-react@1.1.0) (2020-06-22)
 
 
