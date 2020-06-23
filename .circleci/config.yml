@@ -65,7 +65,6 @@ jobs:
       - run:
           name: 'Unit tests'
           command: |
-            ./tmp/cc-test-reporter before-build
             yarn test
             for f in packages/*; do
               if [ -d "$f" ]; then
