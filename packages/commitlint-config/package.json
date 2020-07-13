@@ -37,7 +37,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@commitlint/config-conventional": "9.0.1"
+    "@commitlint/config-conventional": "9.1.1"
   },
   "devDependencies": {
     "@void0/eslint-config": "^2.2.0"
